@@ -12,8 +12,13 @@ const Header = () => {
 
   return (
     <header className="soul-header-container">
+      <div><h2>SOUL</h2></div>
+      <div class="hamburguer-item">
+        <div class="line">1</div>
+        <div class="line">2</div>
+        <div class="line">3</div>
+      </div>
       <nav className="soul-nav-container">
-        <h2>SOUL</h2>
         <ul className="nav-items-container">
           <NavItem name={propsItems.home} />
           <NavItem name={propsItems.contact} />
