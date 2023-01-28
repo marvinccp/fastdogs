@@ -1,28 +1,25 @@
 import React, { useState } from "react";
 import NavItem from "./NavItem";
-import '../styles/Header.css'
-
-
-
-
+import "../styles/Header.css";
 
 const Header = () => {
-
-const [click, setClick] = useState(false)
-
+  const [click, setClick] = useState(false);
 
   const propsItems = {
     home: "Home",
     contact: "Contact",
-    about: "About",
-    woman: "Woman",
-    man: "Man",
+    menu: "Hot-Dogs",
+    menu2: "Hamburguers",
+    drinks: "Drinks",
   };
 
   return (
     <header>
       <section className="header-section">
-        <div className="logo-app title">SOUL</div>
+        <div className="logo-container">
+          <img src="./assets/images/fastdogs.png" alt="fast-dogs-logo" />
+          <div className="logo-app title">Fast Dogs</div>
+        </div>
         <div onClick={() => setClick(!click)} className="hamburguer-item">
           <div className="line"></div>
           <div className="line"></div>
@@ -31,10 +28,10 @@ const [click, setClick] = useState(false)
         <nav className={`nav-bar  ${click && "active"}`}>
           <ul>
             <NavItem click={click} name={propsItems.home} />
+            <NavItem click={click} name={propsItems.menu} />
+            <NavItem click={click} name={propsItems.menu2} />
+            <NavItem click={click} name={propsItems.drinks} />
             <NavItem click={click} name={propsItems.contact} />
-            <NavItem click={click} name={propsItems.about} />
-            <NavItem click={click} name={propsItems.woman} />
-            <NavItem click={click} name={propsItems.man} />
           </ul>
         </nav>
       </section>
