@@ -1,15 +1,14 @@
-import React from 'react'
-import '../styles/NavItems.css'
-
+import React from "react";
+import "../styles/NavItems.css";
 
 const NavItem = ({ name }) => {
   return (
     <>
-    <li>
-        {name}
-    </li>
+      <li>
+        <h4>{name}</h4>
+      </li>
     </>
-  )
-}
+  );
+};
 
-export default NavItem
+export default NavItem;

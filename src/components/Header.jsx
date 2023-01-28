@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import NavItem from "./NavItem";
 import '../styles/Header.css'
+
+
+
+
+
 const Header = () => {
+
+const [click, setClick] = useState(false)
+
+
   const propsItems = {
     home: "Home",
     contact: "Contact",
@@ -11,22 +20,24 @@ const Header = () => {
   };
 
   return (
-    <header className="soul-header-container">
-      <div><h2>SOUL</h2></div>
-      <div class="hamburguer-item">
-        <div class="line">1</div>
-        <div class="line">2</div>
-        <div class="line">3</div>
-      </div>
-      <nav className="soul-nav-container">
-        <ul className="nav-items-container">
-          <NavItem name={propsItems.home} />
-          <NavItem name={propsItems.contact} />
-          <NavItem name={propsItems.about} />
-          <NavItem name={propsItems.woman} />
-          <NavItem name={propsItems.man} />
-        </ul>
-      </nav>
+    <header>
+      <section className="header-section">
+        <div className="logo-app title">SOUL</div>
+        <div onClick={() => setClick(!click)} className="hamburguer-item">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
+        <nav className={`nav-bar  ${click && "active"}`}>
+          <ul>
+            <NavItem click={click} name={propsItems.home} />
+            <NavItem click={click} name={propsItems.contact} />
+            <NavItem click={click} name={propsItems.about} />
+            <NavItem click={click} name={propsItems.woman} />
+            <NavItem click={click} name={propsItems.man} />
+          </ul>
+        </nav>
+      </section>
     </header>
   );
 };
