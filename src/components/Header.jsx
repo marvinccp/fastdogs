@@ -18,7 +18,7 @@ const Header = () => {
       <section className="header-section">
         <div className="logo-container">
           <img src="./assets/images/fastdogs.png" alt="fast-dogs-logo" />
-          <div className="logo-app title">Fast Dogs</div>
+          <h2 className="logo-app title">FastDogs</h2>
         </div>
         <div onClick={() => setClick(!click)} className="hamburguer-item">
           <div className="line"></div>
