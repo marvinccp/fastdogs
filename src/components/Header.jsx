@@ -27,7 +27,7 @@ const Header = () => {
         <nav className={`nav-bar  ${click && "active"}`}>
           <ul>
             {propsItems.map((item) => (
-              <NavItem key={item.name} click={click} {...item} />
+              <NavItem key={item.name} {...item} />
             ))}
           </ul>
         </nav>

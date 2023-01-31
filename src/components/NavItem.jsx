@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/NavItems.css";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const NavItem = (props) => {
-  console.log(props)
+  console.log(props);
   return (
     <>
       <li>

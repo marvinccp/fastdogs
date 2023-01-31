@@ -10,6 +10,10 @@
 .nav-bar ul {
     list-style: none;
 }
+.activered{
+color: red;
+font-size: 3rem;
+}
 
 .nav-bar ul li h4:hover {
     color: #383838;
