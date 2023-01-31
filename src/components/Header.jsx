@@ -5,13 +5,12 @@ import "../styles/Header.css";
 const Header = () => {
   const [click, setClick] = useState(false);
 
-  const propsItems = {
-    home: "Home",
-    contact: "Contact",
-    menu: "Hot-Dogs",
-    menu2: "Hamburguers",
-    drinks: "Drinks",
-  };
+  const propsItems = [
+    { name: "Home", path: "/" },
+    { name: "Hot Dogs", path: "/HotDogs" },
+    { name: "Burguers", path: "/Burguers" },
+    { name: "Contact", path: "/mm" },
+  ];
 
   return (
     <header>
@@ -27,11 +26,9 @@ const Header = () => {
         </div>
         <nav className={`nav-bar  ${click && "active"}`}>
           <ul>
-            <NavItem click={click} name={propsItems.home} />
-            <NavItem click={click} name={propsItems.menu} />
-            <NavItem click={click} name={propsItems.menu2} />
-            <NavItem click={click} name={propsItems.drinks} />
-            <NavItem click={click} name={propsItems.contact} />
+            {propsItems.map((item) => (
+              <NavItem key={item.name} click={click} {...item} />
+            ))}
           </ul>
         </nav>
       </section>

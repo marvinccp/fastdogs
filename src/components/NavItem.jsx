@@ -1,11 +1,15 @@
 import React from "react";
 import "../styles/NavItems.css";
+import { Link } from 'react-router-dom'
 
-const NavItem = ({ name }) => {
+const NavItem = (props) => {
+  console.log(props)
   return (
     <>
       <li>
-        <h4>{name}</h4>
+        <Link to={props.path}>
+          <h4>{props.name}</h4>
+        </Link>
       </li>
     </>
   );
