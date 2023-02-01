@@ -1,0 +1,30 @@
+.card-item-container {
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(224, 224, 224);
+    border-radius: 10px;
+    margin: 0 auto 0 auto;
+}
+.card-item-container img{
+    width: 50%;
+    margin: 20px 0 10px 0;
+}
+.items-cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 30%));
+    grid-template-rows: 1fr;
+    justify-content: center;
+    max-width: 85%;
+    margin: 0 auto 60px auto;
+    gap: 20px;
+}
+.title-container{
+    display: flex;
+    height: 60px;
+    margin: 40px 0;
+    align-items: center;
+    justify-content: center;
+}
