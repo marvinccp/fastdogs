@@ -18,7 +18,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 310px));
     grid-template-rows: 1fr;
     justify-content: center;
-    max-width: 80%;
+    max-width: 85%;
     margin: 0 auto 60px auto;
     gap: 20px;
 }
