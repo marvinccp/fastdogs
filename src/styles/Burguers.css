@@ -1,6 +1,7 @@
 .card-item-container {
     height: 270px;
     display: flex;
+    height: 320px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -14,10 +15,10 @@
 }
 .items-cards-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 30%));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 310px));
     grid-template-rows: 1fr;
     justify-content: center;
-    max-width: 85%;
+    max-width: 80%;
     margin: 0 auto 60px auto;
     gap: 20px;
 }
