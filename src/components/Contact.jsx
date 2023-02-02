@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import "../styles/Contact.css";
-
+//deploy in netlify
 const Contact = () => {
   return (
     <>
