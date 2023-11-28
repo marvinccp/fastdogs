@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavItem from "./NavItem";
 import "../styles/Header.css";
+import { motion } from 'framer-motion'
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -22,20 +23,21 @@ const Header = () => {
             <h2 className="logo-app title">FastDogs</h2>
           </div>
         </Link>
-        <div onClick={() => setClick(!click)} className="hamburguer-item">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 500, damping: 15 }}
+          onClick={() => setClick(!click)}
+          className="hamburguer-item"
+        >
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
-        </div>
+        </motion.div>
         <nav className={`nav-bar  ${click && "active"}`}>
           <ul>
-            {
-            
-            React.Children.toArray(propsItems.map((item) => (
-              <NavItem  {...item} />
-            )))
-            
-            }
+            {React.Children.toArray(
+              propsItems.map((item) => <NavItem {...item} />)
+            )}
           </ul>
         </nav>
       </section>
